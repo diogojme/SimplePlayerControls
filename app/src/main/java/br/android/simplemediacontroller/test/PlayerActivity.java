@@ -82,10 +82,16 @@ public class PlayerActivity extends AppCompatActivity implements OnConnectionLis
 
         bigView = mediaButtons.getBigView();
         addMediaButtonListener();
-        mediaPlayerControl.addSource(data);
+
+        try {
+            mediaPlayerControl.addSource(data);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
         mediaPlayerControl.addOnInfoUpdateListener(this);
-        mediaPlayerControl.addOnProgressUdpdateListener(this);
-        mediaPlayerControl.addOnProgressMaxUdpdateListener(this);
+        mediaPlayerControl.addOnProgressUpdateListener(this);
+        mediaPlayerControl.addOnProgressMaxUpdateListener(this);
     }
 
     private void addMediaButtonListener(){
