@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PlayerSlideMenu</string>
+
+    <string name="abrir"> "Abrir"</string>
+    <string name="fechar"> fechar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>

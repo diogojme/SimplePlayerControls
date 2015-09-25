@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <br.android.simplemediacontroller.player.widgets.MediaButtons
+        android:id="@+id/home_np"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_small_view_controls_container_size"
+        android:layout_gravity="bottom" />
+</LinearLayout>

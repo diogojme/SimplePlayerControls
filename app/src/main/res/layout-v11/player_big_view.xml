@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#535353"
+    tools:context=".MainActivity">
+
+    <!-- Component Player  controls-->
+    <LinearLayout
+        android:id="@+id/player_big_view_controls_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_big_view_controls_container_size"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/player_big_view_shuffle"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_shuffle_white_48dp"
+            android:background="?android:attr/selectableItemBackground"   />
+
+        <ImageButton
+            android:id="@+id/player_big_view_previous"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_skip_previous_white_48dp"
+            android:background="?android:attr/selectableItemBackground"  />
+
+        <ImageButton
+            android:id="@+id/player_big_view_toggle"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_play_circle_filled_white_48dp"
+            android:background="?android:attr/selectableItemBackground"  />
+
+        <ImageButton
+            android:id="@+id/player_big_view_next"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_skip_next_white_48dp"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <ImageButton
+            android:id="@+id/player_big_view_list"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_queue_music_white_48dp"
+            android:background="?android:attr/selectableItemBackground"  />
+
+    </LinearLayout>
+
+    <!-- album cover -->
+    <ImageView
+        android:id="@+id/player_big_view_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mcguime"
+        android:scaleType="centerCrop"
+        android:layout_above="@id/player_big_view_controls_container" />
+
+    <!-- timer container -->
+    <RelativeLayout
+        android:id="@+id/player_big_view_timer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/player_big_view_cover"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/player_big_view_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentLeft="true"
+            android:text="--:--" />
+
+        <TextView
+            android:id="@+id/player_big_view_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:text="--:--" />
+    </RelativeLayout>
+
+    <!-- seekbar -->
+    <SeekBar
+        android:id="@+id/player_big_view_seek_bar"
+        android:layout_above="@id/player_big_view_controls_container"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_marginBottom="-14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
