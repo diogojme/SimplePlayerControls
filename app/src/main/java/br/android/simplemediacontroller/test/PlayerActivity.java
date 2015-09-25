@@ -103,7 +103,7 @@ public class PlayerActivity extends AppCompatActivity implements OnConnectionLis
             }
         });
 
-        bigView.togle.setOnClickListener(new View.OnClickListener() {
+        bigView.toggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mediaPlayerControl.toggle();

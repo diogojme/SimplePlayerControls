@@ -14,10 +14,6 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
 import br.android.simplemediacontroller.R;
 import br.android.simplemediacontroller.player.core.PlayerService;
 import br.android.simplemediacontroller.player.listeners.OnConnectionListener;
@@ -108,30 +104,43 @@ public class MediaButtons extends FrameLayout {
     }
 
     public class LayoutBigView{
-        @Bind(R.id.player_big_view_cover) public ImageView cover;
-        @Bind(R.id.player_big_view_next) public ImageButton next;
-        @Bind(R.id.player_big_view_seek_bar) public SeekBar seekBar;
-        @Bind(R.id.player_big_view_toggle) public ImageButton togle;
-        @Bind(R.id.player_big_view_shuffle) public ImageButton shuffle;
-        @Bind(R.id.player_big_view_previous) public ImageButton previous;
-        @Bind(R.id.player_big_view_duration) public TextView duration;
-        @Bind(R.id.player_big_view_progress) public TextView progress;
+        public ImageView cover;
+        public SeekBar seekBar;
+        public ImageButton next;
+        public TextView duration;
+        public TextView progress;
+        public ImageButton toggle;
+        public ImageButton shuffle;
+        public ImageButton previous;
 
         public LayoutBigView(View view){
-            ButterKnife.bind(this, view);
+            cover = (ImageView) view.findViewById(R.id.player_big_view_cover);
+            next = (ImageButton) view.findViewById(R.id.player_big_view_next);
+            seekBar = (SeekBar) view.findViewById(R.id.player_big_view_seek_bar);
+            toggle = (ImageButton) view.findViewById(R.id.player_big_view_toggle);
+            shuffle = (ImageButton) view.findViewById(R.id.player_big_view_shuffle);
+            previous = (ImageButton) view.findViewById(R.id.player_big_view_previous);
+            duration = (TextView) view.findViewById(R.id.player_big_view_duration);
+            progress = (TextView) view.findViewById(R.id.player_big_view_progress);
         }
     }
 
     public class LayoutSmallView{
-        @Bind(R.id.player_small_view_song) public TextView song;
-        @Bind(R.id.player_small_view_album) public TextView album;
-        @Bind(R.id.player_small_view_next) public ImageButton next;
-        @Bind(R.id.player_small_view_artist) public TextView artist;
-        @Bind(R.id.player_small_view_container) public View container;
-        @Bind(R.id.player_small_view_toggle) public ImageButton toggle;
+        public TextView song;
+        public TextView album;
+        public View container;
+        public TextView artist;
+        public ImageView cover;
+        public ImageButton next;
+        public ImageButton toggle;
 
         public LayoutSmallView(View view){
-            ButterKnife.bind(this, view);
+            container = view.findViewById(R.id.player_small_view_container);
+            cover = (ImageView) view.findViewById(R.id.player_small_view_cover);
+            next = (ImageButton) view.findViewById(R.id.player_small_view_next);
+            toggle = (ImageButton) view.findViewById(R.id.player_small_view_toggle);
+            song = (TextView) view.findViewById(R.id.player_small_view_song);
+            artist = (TextView) view.findViewById(R.id.player_small_view_artist);
         }
     }
 
